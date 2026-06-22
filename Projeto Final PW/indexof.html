@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍓 Receitinhas da Lala 🍰</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginScreen" class="login-screen">
+    <h2>🍓 Escolha seu perfil</h2>
+    <input type="text" id="username" placeholder="Seu nome">
+    <button onclick="login()">🎮 Entrar</button>
+</div>
+
+<div class="decor decor1">🍓</div>
+<div class="decor decor2">🧁</div>
+<div class="decor decor3">🍰</div>
+<div class="decor decor4">🍳</div>
+
+<header class="banner">
+    <img src="banner.png" alt="Receitinhas da Lala" style="max-width: 100%; height: auto;">
+</header>
+
+<main>
+
+    <aside class="sidebar">
+        <h3>📂 Categorias</h3>
+        <button class="tab-btn active" data-category="todas">🍽 Todas</button>
+        <button class="tab-btn" data-category="doces">🍩 Doces</button>
+        <button class="tab-btn" data-category="salgados">🥪 Salgados</button>
+        <button class="tab-btn" data-category="bebidas">🧃 Bebidas</button>
+        <button class="tab-btn" data-category="favoritos">❤️ Favoritos</button>
+
+        <hr style="border: 2px dashed #000; margin: 20px 0;">
+
+        <button onclick="exportJSON()" style="width: 100%; font-size: 9px; background: #e6e6fa;">📤 Exportar Livro</button>
+    </aside>
+
+    <section class="content">
+
+        <div class="form-container">
+            <h2 id="formTitle">Adicionar Receita</h2>
+            <form id="recipeForm">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <textarea id="ingredientes" placeholder="Ingredientes..." required></textarea>
+                <textarea id="preparo" placeholder="Modo de preparo..." required></textarea>
+                <input type="number" id="tempo" placeholder="Tempo (min)" min="1" required>
+
+                <select id="categoria">
+                    <option value="doces">Doces</option>
+                    <option value="salgados">Salgados</option>
+                    <option value="bebidas">Bebidas</option>
+                </select>
+
+                <input type="file" id="imagemReceita" accept="image/*">
+                <button type="submit">💾 Salvar Receita</button>
+            </form>
+        </div>
+
+        <div class="receitas-section">
+            <h2>📖 Livro de Receitas</h2>
+            <div id="recipesContainer"></div>
+            <div id="pagination"></div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    🍓 Feito com carinho e açúcar 🍰 
+         © lais1010 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

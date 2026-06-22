@@ -1,0 +1,268 @@
+/* =======================
+   BASE GERAL
+======================= */
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #222;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+    background-color: #fff0f5;
+    background-image: linear-gradient(90deg, rgba(230, 230, 250, 0.2) 50%, transparent 50%),
+                      linear-gradient(rgba(230, 230, 250, 0.2) 50%, transparent 50%);
+    background-size: 32px 32px;
+}
+/* =======================
+   LOGIN SCREEN (SAVE GAME)
+======================= */
+.login-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(230, 230, 250, 0.95); /* Lilás Suave com opacidade */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    gap: 15px;
+}
+
+.login-screen input {
+    padding: 10px;
+    border: 3px solid #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background: #fff;
+}
+
+.login-screen button {
+    padding: 10px;
+    border: 3px solid #000;
+    background: #da70d6; /* Lilás/Orquídea Vibrante */
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* =======================
+   HEADER
+======================= */
+.banner {
+    text-align: center;
+    padding: 20px;
+    background: #ffb6c1; /* Mantido rosa no topo */
+    border-bottom: 4px solid #000;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.banner p {
+    font-size: 9px;
+    margin: 5px 0 0 0;
+}
+
+/* =======================
+   LAYOUT PRINCIPAL
+======================= */
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =======================
+   SIDEBAR RPG
+======================= */
+.sidebar {
+    width: 220px;
+    background: #fff;
+    border: 4px solid #000;
+    padding: 15px;
+    box-shadow: 6px 6px 0 #000;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* BOTÕES ABAS */
+.tab-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #000;
+    background: #ffe4ec;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    text-align: left;
+    transition: 0.2s;
+}
+
+/* hover */
+.tab-btn:hover {
+    transform: scale(1.05);
+    background: #e6e6fa; /* Vira lilás no hover */
+}
+
+/* ativo */
+.tab-btn.active {
+    background: #da70d6; /* Lilás ativo */
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* =======================
+   CONTEÚDO
+======================= */
+.content {
+    flex: 1;
+}
+
+/* =======================
+   FORMULÁRIO
+======================= */
+.form-container {
+    background: #fff;
+    border: 4px solid #000;
+    padding: 15px;
+    box-shadow: 6px 6px 0 #000;
+    margin-bottom: 30px;
+}
+
+.form-container h2 {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 3px solid #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    box-sizing: border-box;
+}
+
+/* =======================
+   BOTÕES GERAIS
+======================= */
+button {
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid #000;
+    background: #ffb6c1;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* =======================
+   SEÇÃO DO LIVRO
+======================= */
+.receitas-section h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* CARDS DE RECEITA */
+.recipe-card {
+    border: 4px solid #000;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 6px 6px 0 #000;
+    transition: 0.2s;
+}
+
+.recipe-card:hover {
+    transform: scale(1.01);
+}
+
+.recipe-card h3 {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.recipe-card p {
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+/* imagem receita */
+.recipe-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+    border: 3px solid #000;
+}
+
+/* BOTÕES DOS CARDS */
+.recipe-card button {
+    margin-top: 8px;
+    margin-right: 5px;
+    font-size: 8px;
+}
+
+/* =======================
+   PAGINAÇÃO (LIVRO RPG)
+======================= */
+#pagination {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#pagination button {
+    font-size: 8px;
+    padding: 8px;
+    background: #e6e6fa; /* Botões de página lilás */
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 8px;
+    background: #e6e6fa; /* Footer lilás */
+    border-top: 4px solid #000;
+    margin-top: 40px;
+}
+
+/* =======================
+   DECORAÇÕES FLUTUANTES
+======================= */
+.decor {
+    position: fixed;
+    font-size: 20px;
+    animation: float 3s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.decor1 { top: 12%; left: 3%; }
+.decor2 { top: 22%; right: 3%; }
+.decor3 { bottom: 12%; left: 4%; }
+.decor4 { bottom: 18%; right: 4%; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
